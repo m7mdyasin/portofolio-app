@@ -28,24 +28,20 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  carousel_slider: ^5.1.1
+  cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
-
+  font_awesome_flutter: ^10.10.0
 
 flutter_native_splash:
-  color: "#0C1121"                     # لون الخلفية
+  color: "#0C1121" # لون الخلفية
   image: lib/assets/images/IMG_1002.jpg # لوجو التطبيق
   android: true
   ios: true
   web: false
 
-
-
 dev_dependencies:
-  flutter_native_splash: ^2.4.6
-  flutter_test:
-    sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -53,10 +49,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_native_splash: ^2.4.6
+  flutter_test:
+    sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -69,13 +67,10 @@ flutter:
   assets:
     - lib/assets/images/
   #   - images/a_dot_ham.jpeg
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
-
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/to/asset-from-package
-
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a

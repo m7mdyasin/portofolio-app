@@ -5,10 +5,8 @@ class HomeBackGround extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Positioned.fill(
       child: Container(
-        height: double.infinity,
-        width: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
