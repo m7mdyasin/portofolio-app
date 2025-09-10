@@ -1,4 +1,6 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:portofolio_app/views/main_view.dart';
 import 'package:portofolio_app/widgets/home_back_ground.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -56,6 +58,16 @@ class _SplashScreenState extends State<SplashScreen>
     Future.delayed(const Duration(milliseconds: 800), () {
       _textController.forward();
     });
+
+    // ⏳ انتقال بعد 3.5 ثانية
+    Timer(const Duration(milliseconds: 2000), () {
+      if (mounted) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => MainView()),
+        );
+      }
+    });
   }
 
   @override
@@ -67,6 +79,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
         const HomeBackGround(),
@@ -101,12 +114,16 @@ class _SplashScreenState extends State<SplashScreen>
                         ),
                       ],
                     ),
-                    child: const ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(100)),
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(100),
+                      ),
                       child: Image(
-                        image: AssetImage('lib/assets/images/IMG_1002.jpg'),
-                        width: 150,
-                        height: 150,
+                        image: const AssetImage(
+                          'lib/assets/images/IMG_1002.jpg',
+                        ),
+                        width: size.width * 0.4,
+                        height: size.height * 0.3,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -120,11 +137,11 @@ class _SplashScreenState extends State<SplashScreen>
                 opacity: _textFade,
                 child: SlideTransition(
                   position: _textSlide,
-                  child: const Text(
+                  child: Text(
                     'Welcome to Talent Hub',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 24,
+                      fontSize: size.width * 0.06,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
