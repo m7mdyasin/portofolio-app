@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_app/widgets/bannar_image.dart';
+import 'package:portofolio_app/widgets/custoum_app_bar.dart';
 import 'package:portofolio_app/widgets/document_viwe.dart';
 import 'package:portofolio_app/widgets/grid_view.dart';
 import 'package:portofolio_app/widgets/home_back_ground.dart';
@@ -17,6 +18,7 @@ class MainView extends StatelessWidget {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
+        appBar: CustoumAppBar(),
         body: Stack(
           children: [
             const HomeBackGround(),
