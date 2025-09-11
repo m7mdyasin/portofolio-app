@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_app/widgets/bannar_image.dart';
+import 'package:portofolio_app/widgets/document_viwe.dart';
+import 'package:portofolio_app/widgets/grid_view.dart';
 import 'package:portofolio_app/widgets/home_back_ground.dart';
 import 'package:portofolio_app/widgets/information_card.dart';
+import 'package:portofolio_app/widgets/links_list_tile.dart';
 
 class MainView extends StatelessWidget {
   const MainView({super.key});
@@ -51,30 +54,10 @@ class CustoumTabBar extends StatelessWidget {
         Expanded(
           child: TabBarView(
             children: [
-              Center(
-                child: Text(
-                  "Photos Content",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              Center(
-                child: Text(
-                  "Videos Content",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              Center(
-                child: Text(
-                  "Links Content",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              Center(
-                child: Text(
-                  "Documents Content",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+              CustoumGridView(),
+              // CustoumGridView(),
+              LinksListTile(),
+              DocumentView(),
             ],
           ),
         ),
