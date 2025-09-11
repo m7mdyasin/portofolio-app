@@ -5,6 +5,7 @@ import 'package:portofolio_app/widgets/grid_view.dart';
 import 'package:portofolio_app/widgets/home_back_ground.dart';
 import 'package:portofolio_app/widgets/information_card.dart';
 import 'package:portofolio_app/widgets/links_list_tile.dart';
+import 'package:portofolio_app/widgets/video_view.dart';
 
 class MainView extends StatelessWidget {
   const MainView({super.key});
@@ -55,6 +56,7 @@ class CustoumTabBar extends StatelessWidget {
           child: TabBarView(
             children: [
               CustoumGridView(),
+              VideoView(),
               // CustoumGridView(),
               LinksListTile(),
               DocumentView(),
